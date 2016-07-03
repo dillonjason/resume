@@ -25,7 +25,8 @@ const PATHS = {
     app: path.resolve(__dirname, 'app'),
     style: [
         path.resolve(__dirname, 'app/main.scss'),
-        path.resolve(__dirname, 'node_modules/purecss')
+        path.resolve(__dirname, 'node_modules/purecss'),
+        path.resolve(__dirname, 'node_modules/purecss/build/grids-responsive.css')
     ],
     build: path.resolve(__dirname, 'build')
 };

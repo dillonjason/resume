@@ -1,10 +1,11 @@
 import View from '../libs/view'
 import Navbar from '../components/nav/navbar'
+import { browserHistory } from 'react-router'
 
 class Master extends React.Component {
     render() {
         return (
-            <View>
+            <div>
                 <Navbar
                     header="DILLON JASON"
                     navItems={
@@ -15,14 +16,14 @@ class Master extends React.Component {
                             {name: "Achievements", to: "/Achievements"}
                         ]
                     }
+                    showCards={this.props.location.pathname === '/'}
                 />
-
-                <div className="content-wrapper">
+                <View>
                     <div className="content">
                         {this.props.children}
                     </div>
-                </div>
-            </View>
+                </View>
+            </div>
         );
     }
 }

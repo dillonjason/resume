@@ -1,5 +1,4 @@
-.content-wrapper {
-  position: relative;
-  top: $menu-height;
+.view {
   margin: $general-margin;
+  margin-top: $general-margin + $menu-height;
 }
