@@ -9,7 +9,7 @@ class Master extends React.Component {
                     header="DILLON JASON"
                     navItems={
                         [
-                            {name: "Eduction", to: "/Education"},
+                            {name: "Education", to: "/Education"},
                             {name: "Experience", to: "/Experience"},
                             {name: "Skills", to: "/Skills"},
                             {name: "Achievements", to: "/Achievements"}

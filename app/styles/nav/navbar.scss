@@ -1,5 +1,30 @@
-.pure-menu .pure-menu-horizontal {
+.pure-menu.pure-menu-horizontal {
+  box-shadow: $shadow-level-2;
+  background-color: $primary-dark;
+  height: $menu-height;
 
+  .pure-menu-link {
+    color: $text-light;
+    padding: 1em 1em;
+
+    &:hover {
+      background-color: $primary;
+    }
+
+    &:focus {
+      background-color: $primary-dark;
+    }
+
+    &.active::after {
+      content: " ";
+      display: block;
+      border-bottom: 2px solid $text-light;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
 
   &.menu-cards {
 

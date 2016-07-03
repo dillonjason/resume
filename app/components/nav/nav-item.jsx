@@ -4,7 +4,7 @@ class NavItem extends React.Component {
     render() {
         return(
             <li className="pure-menu-item">
-                <Link to={this.props.to} className="pure-menu-link">{this.props.children}</Link>
+                <Link to={this.props.to} activeClassName="active" className="pure-menu-link">{this.props.children}</Link>
             </li>
         );
     }
