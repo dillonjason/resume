@@ -17,12 +17,10 @@ class Navbar extends React.Component {
     onNavItemClick = () => {
       this.setState({'showCards': false});
         this.refs.menu.classList.remove('show');
-        //document.body.classList.remove('mobile-menu');
     };
 
     onMobileToggleClick = () => {
         this.refs.menu.classList.toggle('show');
-        //document.body.classList.toggle('mobile-menu');
     };
 
     generateMenuList = (ref) => {
@@ -45,7 +43,7 @@ class Navbar extends React.Component {
                         <s className="bar"></s>
                     </div>
                     {this.props.header &&
-                        <Link to="/" className="pure-menu-heading pure-menu-link">{this.props.header}</Link>
+                        <Link to="/" className="pure-menu-heading pure-menu-link" onClick={this.onNavItemClick}>{this.props.header}</Link>
                     }
                     {this.generateMenuList()}
                 </div>
