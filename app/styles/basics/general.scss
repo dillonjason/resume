@@ -1,8 +1,8 @@
-body.mobile-menu {
-  min-height: 755px;
-}
-
 .view {
   margin: $general-margin;
   margin-top: $general-margin + $menu-height;
+
+  &.menu-not-fixed {
+    margin-top: $general-margin;
+  }
 }

@@ -4,6 +4,7 @@ import { browserHistory } from 'react-router'
 
 class Master extends React.Component {
     render() {
+        let isHome = this.props.location.pathname === '/';
         return (
             <div>
                 <Navbar
@@ -16,9 +17,9 @@ class Master extends React.Component {
                             {name: "Achievements", to: "/Achievements"}
                         ]
                     }
-                    showCards={this.props.location.pathname === '/'}
+                    showCards={isHome}
                 />
-                <View>
+                <View className={isHome ? "menu-not-fixed" : ""}>
                     <div className="content">
                         {this.props.children}
                     </div>
