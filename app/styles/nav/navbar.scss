@@ -1,5 +1,65 @@
 $menu-hide: 300px;
 
+.pure-menu.mobile-menu {
+  position: absolute;
+  top: $menu-height;
+
+  .pure-menu-list {
+    position: absolute;
+    left: -1 * $menu-hide;
+    right: initial;
+
+    .pure-menu-item {
+      position: relative;
+      background-color: $accent;
+      display: block;
+      top: $general-margin;
+      margin-bottom: 5px;
+      box-shadow: $shadow-level-2;
+      left: 0;
+      text-align: center;
+      transition: left $general-speed ease-in-out;
+
+      &:nth-child(2) {
+        transition-delay: 75ms;
+      }
+
+      &:nth-child(3) {
+        transition-delay: 150ms;
+      }
+
+      &:nth-child(4) {
+        transition-delay: 225ms;
+      }
+
+      .pure-menu-link {
+        padding: 75px;
+        color: $text-light;
+
+        &:hover {
+          background-color: $accent;
+        }
+
+        &:focus {
+          background-color: $accent;
+        }
+
+        &.active::after {
+          display: none;
+        }
+      }
+    }
+
+    &.show {
+      @media screen and (max-width: $grid-md) {
+        .pure-menu-item {
+          left: $menu-hide + $general-margin;
+        }
+      }
+    }
+  }
+}
+
 .pure-menu.pure-menu-horizontal {
   box-shadow: $shadow-level-2;
   background-color: $primary-dark;
@@ -151,54 +211,7 @@ $menu-hide: 300px;
     }
 
     .pure-menu-list {
-      position: absolute;
-      left: -1 * $menu-hide;
-      right: initial;
-
-      .pure-menu-item {
-        position: relative;
-        background-color: $accent;
-        display: block;
-        top: $menu-height + $general-margin;
-        margin-bottom: 5px;
-        box-shadow: $shadow-level-2;
-        left: 0;
-        transition: left $general-speed ease-in-out;
-
-        &:nth-child(2) {
-          transition-delay: 75ms;
-        }
-
-        &:nth-child(3) {
-          transition-delay: 150ms;
-        }
-
-        &:nth-child(4) {
-          transition-delay: 225ms;
-        }
-
-        .pure-menu-link {
-          padding: 75px;
-
-          &:hover {
-            background-color: $accent;
-          }
-
-          &:focus {
-            background-color: $accent;
-          }
-
-          &.active::after {
-            display: none;
-          }
-        }
-      }
-
-      &.show {
-        .pure-menu-item {
-          left: $menu-hide + $general-margin;
-        }
-      }
+      display: none;
     }
   }
 }

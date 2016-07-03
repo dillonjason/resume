@@ -17,28 +17,42 @@ class Navbar extends React.Component {
     onNavItemClick = () => {
       this.setState({'showCards': false});
         this.refs.menu.classList.remove('show');
+        //document.body.classList.remove('mobile-menu');
     };
 
     onMobileToggleClick = () => {
         this.refs.menu.classList.toggle('show');
+        //document.body.classList.toggle('mobile-menu');
+    };
+
+    generateMenuList = (ref) => {
+        return (
+            <ul className="pure-menu-list" ref={ref ? ref : ""}>
+                {this.props.navItems.map((item, index) => {
+                    return <NavItem to={item.name} key={index} onClick={this.onNavItemClick}>{item.name}</NavItem>
+                })}
+            </ul>
+        );
     };
 
     render() {
         return(
-            <div className={"pure-menu pure-menu-horizontal pure-menu-fixed " + (this.state.showCards ? "menu-cards" : "") }>
-                <div className="mobile-toggle" onClick={this.onMobileToggleClick}>
-                    <s className="bar"></s>
-                    <s className="bar"></s>
-                    <s className="bar"></s>
+            <div className="resume-nav">
+                <div className={"pure-menu pure-menu-horizontal " + (this.state.showCards ? "menu-cards" : "pure-menu-fixed") }>
+                    <div className="mobile-toggle" onClick={this.onMobileToggleClick}>
+                        <s className="bar"></s>
+                        <s className="bar"></s>
+                        <s className="bar"></s>
+                    </div>
+                    {this.props.header &&
+                        <Link to="/" className="pure-menu-heading pure-menu-link">{this.props.header}</Link>
+                    }
+                    {this.generateMenuList()}
                 </div>
-                {this.props.header &&
-                    <Link to="/" className="pure-menu-heading pure-menu-link">{this.props.header}</Link>
-                }
-                <ul className="pure-menu-list" ref="menu">
-                    {this.props.navItems.map((item, index) => {
-                        return <NavItem to={item.name} key={index} onClick={this.onNavItemClick}>{item.name}</NavItem>
-                    })}
-                </ul>
+
+                <div className="pure-menu mobile-menu">
+                    {this.generateMenuList("menu")}
+                </div>
             </div>
         );
     }
