@@ -28,6 +28,7 @@ const PATHS = {
         path.resolve(__dirname, 'node_modules/purecss'),
         path.resolve(__dirname, 'node_modules/purecss/build/grids-responsive.css')
     ],
+    images: path.resolve(__dirname, 'app/images'),
     build: path.resolve(__dirname, 'build')
 };
 
@@ -64,7 +65,7 @@ switch(TARGET) {
     case 'stats':
         config = merge(common,
             loaders.es6Loader(PATHS.app),
-            loaders.styleExtracts(PATHS.style),
+            loaders.styleExtracts(PATHS),
             purifyCSS.purify([PATHS.app]),
             minify.minify(),
             definePlugin.setFreeVariable('process.env.NODE_ENV', 'production'),
@@ -82,7 +83,7 @@ switch(TARGET) {
     default:
         config = merge(common,
             loaders.es6Loader(PATHS.app),
-            loaders.styleLoaders(PATHS.style),
+            loaders.styleLoaders(PATHS),
             providePlugin.setProvides({
                 React: 'react'
             }),

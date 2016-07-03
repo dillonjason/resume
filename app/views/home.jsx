@@ -1,22 +1,13 @@
+import SummaryContainer from '../components/summary-container';
+import HomeImage from '../images/html-programming.jpg';
+
 class Home extends React.Component {
     render() {
         return (
             <div>
-                Home
-                <div className="pure-g">
-                    <div className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-                        Stuffs
-                    </div>
-                    <div className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-                        Stuffs
-                    </div>
-                    <div className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-                        Stuffs
-                    </div>
-                    <div className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-                        Stuffs
-                    </div>
-                </div>
+                <SummaryContainer graphic={HomeImage}>
+                    Career driven application developer dedicated to improving himself and those around him to achieve more productive and up to date workflows.  Excels at learning new skills and determining when and where to use them.
+                </SummaryContainer>
             </div>
         );
     }

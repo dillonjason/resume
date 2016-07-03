@@ -2,7 +2,9 @@
   margin: $general-margin;
   margin-top: $general-margin + $menu-height;
 
+  color: $text-dark;
+
   &.menu-not-fixed {
-    margin-top: $general-margin;
+    margin: 0;
   }
 }
