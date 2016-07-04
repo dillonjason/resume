@@ -19,7 +19,6 @@ class Education extends React.Component {
                     <Content
                         contentClass={true}
                         title="Virginia Commonwealth University"
-                        date="July 2016"
                         subTitle="Richmond, VA"
                     >
                         <p>
@@ -30,15 +29,13 @@ class Education extends React.Component {
                     </Content>
                     <Content
                         contentClass={true}
-                        title="Virginia Commonwealth University"
-                        date="July 2016"
-                        subTitle="Richmond, VA"
+                        title="Interesting Electives"
                     >
-                        <p>
-                            Graduated August 2012<br/>
-                            Bachelor of Science, Computer Science<br/>
-                            Major GPA: 3.25     GPA: 2.85
-                        </p>
+                        <ul>
+                            <li>Database Design</li>
+                            <li>Artificial Intelligence</li>
+                            <li>Web Development</li>
+                        </ul>
                     </Content>
                 </ContentList>
 
