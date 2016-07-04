@@ -8,6 +8,10 @@ class Education extends React.Component {
                 <SummaryContainer graphic={EducationImage}>
                     Some education stuffs
                 </SummaryContainer>
+
+                <div className="content">
+                    Some crazy stuff is gonna happen here.
+                </div>
             </div>
         );
     }
