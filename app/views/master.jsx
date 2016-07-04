@@ -20,9 +20,7 @@ class Master extends React.Component {
                     showCards={isHome}
                 />
                 <View className={isHome ? "menu-not-fixed" : ""}>
-                    <div className="content">
-                        {this.props.children}
-                    </div>
+                    {this.props.children}
                 </View>
             </div>
         );

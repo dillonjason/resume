@@ -4,12 +4,18 @@ body {
 }
 
 .view {
-  margin: $general-margin;
-  margin-top: $general-margin + $menu-height;
-
+  margin-top: $menu-height;
   color: $text-dark;
 
   &.menu-not-fixed {
     margin: 0;
   }
+
+  .content {
+    margin: $general-margin;
+  }
+}
+
+.clear-fix {
+  clear: both;
 }

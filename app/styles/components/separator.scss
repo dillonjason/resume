@@ -1,0 +1,8 @@
+.separator {
+  margin: $general-margin - 5px;
+  background-color: $text-dark-dividers;
+
+  &.light {
+    background-color: $text-light-dividers;
+  }
+}
