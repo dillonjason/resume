@@ -1,5 +1,15 @@
-.content-wrapper {
-  position: relative;
-  top: $menu-height;
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F5F5F5;
+}
+
+.view {
   margin: $general-margin;
+  margin-top: $general-margin + $menu-height;
+
+  color: $text-dark;
+
+  &.menu-not-fixed {
+    margin: 0;
+  }
 }

@@ -1,0 +1,217 @@
+$menu-hide: 300px;
+
+.pure-menu.mobile-menu {
+  position: absolute;
+  top: $menu-height;
+
+  .pure-menu-list {
+    position: absolute;
+    left: -1 * $menu-hide;
+    right: initial;
+
+    .pure-menu-item {
+      position: relative;
+      background-color: $accent;
+      display: block;
+      top: $general-margin;
+      margin-bottom: 5px;
+      box-shadow: $shadow-level-2;
+      left: 0;
+      text-align: center;
+      transition: left $general-speed ease-in-out;
+
+      &:nth-child(2) {
+        transition-delay: 75ms;
+      }
+
+      &:nth-child(3) {
+        transition-delay: 150ms;
+      }
+
+      &:nth-child(4) {
+        transition-delay: 225ms;
+      }
+
+      .pure-menu-link {
+        padding: 75px;
+        color: $text-light;
+
+        &:hover {
+          background-color: $accent;
+        }
+
+        &:focus {
+          background-color: $accent;
+        }
+
+        &.active::after {
+          display: none;
+        }
+      }
+    }
+
+    &.show {
+      @media screen and (max-width: $grid-md) {
+        .pure-menu-item {
+          left: $menu-hide + $general-margin;
+        }
+      }
+    }
+  }
+}
+
+.pure-menu.pure-menu-horizontal {
+  box-shadow: $shadow-level-2;
+  background-color: $primary-dark;
+  height: $menu-height;
+
+  .pure-menu-heading {
+    position: absolute;
+    top: 0;
+  }
+
+  .mobile-toggle {
+    width: 34px;
+    height: $menu-height;
+    display: none;
+    margin-left: 1em;
+    cursor: pointer;
+
+    .bar {
+      background-color: $text-light;
+      display: block;
+      width: 20px;
+      height: 2px;
+      border-radius: 100px;
+      position: absolute;
+      top: 18px;
+
+      &:nth-child(2) {
+        top: 24px;
+      }
+
+      &:nth-child(3) {
+        top: 30px;
+      }
+    }
+  }
+
+  .pure-menu-list {
+    max-height: $menu-height;
+    position: absolute;
+    right: calc(100% - 696px);
+    transition: right $general-speed ease-in-out;
+
+    .pure-menu-link {
+      width: 105px;
+      text-align: center;
+    }
+  }
+
+  .pure-menu-link {
+    color: $text-light;
+    padding: 1em 1em;
+    transition: padding $general-speed ease-in-out;
+
+    &:hover {
+      background-color: $primary;
+    }
+
+    &:focus {
+      background-color: $primary-dark;
+    }
+
+    &.active::after {
+      content: " ";
+      display: block;
+      border-bottom: 2px solid $text-light;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  .pure-menu-item {
+    background-color: $primary-dark;
+    transition: top $general-speed ease-in-out,
+                margin-right $general-speed ease-in-out,
+                background-color $general-speed ease-in-out;
+
+    position: relative;
+    top: 0;
+  }
+
+  &.menu-cards {
+    @media screen and (min-width: $grid-md) {
+      .pure-menu-list {
+        position: absolute;
+        left: $general-margin;
+        right: initial;
+
+        @media screen and (min-width: $grid-lg) {
+          right: 0;
+          left: initial;
+        }
+
+        .pure-menu-item {
+          position: relative;
+          background-color: $accent;
+          display: block;
+          top: $menu-height + $general-margin;
+          margin-bottom: 5px;
+          box-shadow: $shadow-level-2;
+
+          .pure-menu-link {
+            padding: 75px;
+
+
+            &:hover {
+              background-color: $accent;
+            }
+
+            &:focus {
+              background-color: $accent;
+            }
+
+            &.active::after {
+              display: none;
+            }
+          }
+
+          @media screen and (min-width: $grid-lg) {
+            display: inline-block;
+            top: 460px;
+            right: 0;
+            margin-right: 30px;
+
+            .pure-menu-link {
+              padding: 50px;
+            }
+          }
+
+          @media screen and (min-width: $grid-x1) {
+            display: inline-block;
+            top: 460px;
+            right: 0;
+            margin-right: 50px;
+
+            .pure-menu-link {
+              padding: 75px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $grid-md) {
+    .mobile-toggle {
+      display: inline-block;
+    }
+
+    .pure-menu-list {
+      display: none;
+    }
+  }
+}

@@ -1,28 +1,30 @@
 import View from '../libs/view'
-import { Link } from 'react-router'
+import Navbar from '../components/nav/navbar'
+import { browserHistory } from 'react-router'
 
 class Master extends React.Component {
     render() {
+        let isHome = this.props.location.pathname === '/';
         return (
-            <View>
-                <div className="pure-menu pure-menu-horizontal pure-menu-fixed">
-                    <Link to="/" className="pure-menu-heading pure-menu-link">BOILER PLATE</Link>
-                    <ul className="pure-menu-list">
-                        <li className="pure-menu-item">
-                            <Link to="/Home" className="pure-menu-link">Home</Link>
-                        </li>
-                        <li className="pure-menu-item">
-                            <Link to="/About" className="pure-menu-link">About</Link>
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="content-wrapper">
+            <div>
+                <Navbar
+                    header="DILLON JASON"
+                    navItems={
+                        [
+                            {name: "Education", to: "/Education"},
+                            {name: "Experience", to: "/Experience"},
+                            {name: "Skills", to: "/Skills"},
+                            {name: "Achievements", to: "/Achievements"}
+                        ]
+                    }
+                    showCards={isHome}
+                />
+                <View className={isHome ? "menu-not-fixed" : ""}>
                     <div className="content">
                         {this.props.children}
                     </div>
-                </div>
-            </View>
+                </View>
+            </div>
         );
     }
 }
