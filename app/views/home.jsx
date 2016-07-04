@@ -1,5 +1,5 @@
 import SummaryContainer from '../components/summary-container';
-import HomeImage from '../images/html-programming.jpg';
+import HomeImage from '../images/home-image-2.jpg';
 
 class Home extends React.Component {
     render() {
