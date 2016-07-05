@@ -29,8 +29,8 @@ Content.propTypes = {
 };
 
 Content.defaultProps = {
-    date: false,
-    subTitle: false,
+    date: '',
+    subTitle: '',
     contentClass: false
 };
 
