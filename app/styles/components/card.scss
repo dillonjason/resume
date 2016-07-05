@@ -1,4 +1,12 @@
 .card-component {
+  .graphic {
+    display: block;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    margin: 15px 15px -15px 15px;
+  }
+
   .card {
     background-color: $white;
     padding: $general-margin;
@@ -18,6 +26,14 @@
     &.dark {
       background-color: $text-dark;
       color: $text-light;
+    }
+
+    .graphic {
+      display: block;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center center;
+      margin: -15px -15px 15px -15px;
     }
   }
 }
