@@ -3,7 +3,7 @@ import Card from '../components/card'
 class CardList extends React.Component {
     render() {
         return(
-            <div className="card-list-component pure-g">
+            <div className={"card-list-component pure-g " + this.props.className}>
                 {this.props.children.map((child, index) => {
                     return(
                         <Card key={index}
@@ -24,7 +24,8 @@ CardList.propTypes = {
 };
 
 CardList.defaultProps = {
-    
+    className: '',
+    images:[]
 };
 
 export default CardList;
