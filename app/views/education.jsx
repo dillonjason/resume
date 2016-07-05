@@ -3,6 +3,7 @@ import Quote from '../components/quote'
 import ContentList from '../components/content-list'
 import Content from '../components/content'
 import EducationImage from '../images/education-image.jpg'
+import CardList from '../components/card-list'
 
 class Education extends React.Component {
     render() {
@@ -29,11 +30,11 @@ class Education extends React.Component {
                     <Content
                         title="Interesting Electives"
                     >
-                        <ul>
-                            <li>Database Design</li>
-                            <li>Artificial Intelligence</li>
-                            <li>Web Development</li>
-                        </ul>
+                        <CardList>
+                            <div>Database Design</div>
+                            <div>Artificial Intelligence</div>
+                            <div>Web Development</div>
+                        </CardList>
                     </Content>
                 </ContentList>
 
