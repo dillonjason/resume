@@ -1,8 +1,10 @@
+$summary-min-height: 250px;
+
 .summary-container {
   background-color: $primary;
   box-shadow: $shadow-level-1;
   color: $text-light;
-  min-height: 250px;
+  min-height: $summary-min-height;
 
   .graphic {
     height: 470px;
@@ -41,9 +43,11 @@
 
     @media screen and (min-width: $grid-md) {
       width: 40%;
-      margin-top: 60px;
       margin-right: 65px;
       float: right;
+      display: flex;
+      align-items: center;
+      height: $summary-min-height - $general-margin * 2;
     }
 
     @media screen and (min-width: $grid-lg) {
