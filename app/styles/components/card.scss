@@ -1,0 +1,39 @@
+.card-component {
+  .graphic {
+    display: block;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    margin: 15px 15px -15px 15px;
+  }
+
+  .card {
+    background-color: $white;
+    padding: $general-margin;
+    box-shadow: $shadow-level-1;
+    margin: $general-margin;
+
+    &.color {
+      background-color: $primary;
+      color: $text-light;
+    }
+
+    &.color.accent {
+      background-color: $accent;
+      color: $text-dark;
+    }
+
+    &.dark {
+      background-color: $text-dark;
+      color: $text-light;
+    }
+
+    .graphic {
+      display: block;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center center;
+      margin: -15px -15px 15px -15px;
+    }
+  }
+}

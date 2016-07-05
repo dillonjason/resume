@@ -3,15 +3,20 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 
 import Master from './views/master'
 import Home from './views/home'
-import About from './views/about'
+import Education from './views/education'
+import Experience from './views/experience'
+import Skills from './views/skills'
+import Achievements from './views/achievements'
 
 export default render(
     (
         <Router history={browserHistory}>
             <Route path="/" component={Master}>
                 <IndexRoute component={Home} />
-                <Route path="/Home" component={Home} />
-                <Route path="/About" component={About} />
+                <Route path="/Education" component={Education} />
+                <Route path="/Experience" component={Experience} />
+                <Route path="/Skills" component={Skills} />
+                <Route path="/Achievements" component={Achievements} />
             </Route>
         </Router>
     ), document.getElementById('app')
