@@ -4,7 +4,7 @@ import Separator from '../components/separator'
 class ComponentList extends React.Component {
     render() {
         return(
-            <div className="content-list-component">
+            <div className="content-list-component content">
                 {this.props.children.map((child, index) => {
                     let showSeparator = this.props.children.length - 1 > index;
                     return (

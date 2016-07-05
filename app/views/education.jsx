@@ -17,7 +17,6 @@ class Education extends React.Component {
 
                 <ContentList>
                     <Content
-                        contentClass={true}
                         title="Virginia Commonwealth University"
                         subTitle="Richmond, VA"
                     >
@@ -28,7 +27,6 @@ class Education extends React.Component {
                         </p>
                     </Content>
                     <Content
-                        contentClass={true}
                         title="Interesting Electives"
                     >
                         <ul>
