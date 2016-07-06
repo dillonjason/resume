@@ -19,6 +19,16 @@ import SassLogo from '../images/logos/sass-logo.png'
 import SQLLogo from '../images/logos/sql-logo.jpg'
 import VBNetLogo from '../images/logos/vnet-logo.jpg'
 
+import EFLogo from '../images/logos/ef-logo.jpg'
+import ESRILogo from '../images/logos/esri-logo.png'
+import GitLogo from '../images/logos/git-logo.png'
+import GruntLogo from '../images/logos/grunt-logo.png'
+import NodeLogo from '../images/logos/node-logo.jpg'
+import PetaPocoLogo from '../images/logos/petapoco-logo.png'
+import SVNLogo from '../images/logos/svn-logo.png'
+import TFSLogo from '../images/logos/tfs-logo.jpg'
+import WebpackLogo from '../images/logos/webpack-logo.png'
+
 
 class Skills extends React.Component {
     render() {
@@ -72,16 +82,54 @@ class Skills extends React.Component {
                     <Content
                         title="ORMs"
                     >
+                        <CardList
+                            horizontalImage={true}
+                            images={[
+                                EFLogo,
+                                PetaPocoLogo
+                            ]}
+                        >
+                            <div>Entity Framework</div>
+                            <div>PetaPoco</div>
+                        </CardList>
+
                     </Content>
 
                     <Content
                         title="Tools"
                     >
+                        <CardList
+                            horizontalImage={true}
+                            images={[
+                                GitLogo,
+                                SVNLogo,
+                                TFSLogo,
+                                NodeLogo,
+                                GruntLogo,
+                                WebpackLogo,
+                                ESRILogo
+                            ]}
+                        >
+                            <div>Git</div>
+                            <div>SVN</div>
+                            <div>TFS</div>
+                            <div>Node.js</div>
+                            <div>Grunt</div>
+                            <div>Webpack</div>
+                            <div>Openlayers/ESRI JS API</div>
+                        </CardList>
+
                     </Content>
 
                     <Content
                         title="Teamwork and Communication"
                     >
+                        <CardList>
+                            <div>Years of experience dealing with multitudes of direct customer communication/interaction</div>
+                            <div>Listen to everyone’s opinions and never reject any idea</div>
+                            <div>Realize when other team members may need some help understanding a concept or idea</div>
+                            <div>Prepared to be wrong when showed the best way by someone else</div>
+                        </CardList>
                     </Content>
                 </ContentList>
             </div>
