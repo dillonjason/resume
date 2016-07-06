@@ -9,6 +9,7 @@ class CardList extends React.Component {
                         <Card key={index}
                               className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3"
                               image={this.props.images[index]}
+                              horizontalImage={this.props.horizontalImage}
                         >
                             {child}
                         </Card>
@@ -25,7 +26,8 @@ CardList.propTypes = {
 
 CardList.defaultProps = {
     className: '',
-    images:[]
+    images:[],
+    horizontalImage: false
 };
 
 export default CardList;
