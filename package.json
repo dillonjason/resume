@@ -5,8 +5,7 @@
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-router": "^2.5.2",
-    "redux": "^3.5.2",
-    "webpack": "^1.9.10"
+    "redux": "^3.5.2"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",
@@ -25,12 +24,13 @@
     "purifycss-webpack-plugin": "^2.0.3",
     "sass-loader": "4.0.0",
     "style-loader": "0.13.1",
+    "webpack": "^1.9.10",
     "webpack-dev-server": "^1.14.1",
     "webpack-merge": "^0.14.0",
     "webpack-validator": "^2.2.2"
   },
   "scripts": {
-    "postinstall": "node deploy",
+    "postinstall": "./node-modules/webpack/bin/webpack",
     "start": "node server.js",
     "build": "webpack",
     "startdev": "webpack-dev-server --history-api-fallback",
