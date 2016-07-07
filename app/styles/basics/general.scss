@@ -1,6 +1,10 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #F5F5F5;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 .view {
@@ -18,4 +22,12 @@ body {
 
 .clear-fix {
   clear: both;
+}
+
+.pull-right {
+  float: right;
+}
+
+.text-secondary {
+  color: $text-dark-secondary;
 }

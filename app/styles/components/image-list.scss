@@ -1,0 +1,27 @@
+.image-list-component {
+  .image-container {
+    margin: $general-margin;
+    box-shadow: $shadow-level-1;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+    }
+
+    &.large {
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .fixed-overlay-component img {
+    cursor: pointer;
+    position: absolute;
+    left: $general-margin * 2;
+    right: $general-margin * 2;
+    margin-top: $general-margin * 2;
+    margin-bottom: $general-margin * 2;
+    width: calc(100% - #{$general-margin * 4});
+  }
+}
