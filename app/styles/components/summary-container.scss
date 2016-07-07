@@ -1,0 +1,84 @@
+$summary-min-height: 250px;
+
+.summary-container {
+  background-color: $primary;
+  box-shadow: $shadow-level-1;
+  color: $text-light;
+  min-height: $summary-min-height;
+
+  .graphic {
+    height: 470px;
+    max-height: 300px;
+    display: block;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: -4px;
+
+    &.hide-md {
+      @media screen and (min-width: $grid-md) {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: $grid-lg) {
+      width: 60%;
+      max-height: none;
+      display: inline-block !important;
+    }
+
+    img {
+      vertical-align: middle;
+
+      @media screen and (min-width: $grid-md) {
+        width: 100%;
+      }
+    }
+  }
+
+  .text {
+    padding: $general-margin;
+    float: none;
+    font-size: 20px;
+
+    @media screen and (min-width: $grid-md) {
+      width: 40%;
+      margin-right: 65px;
+      float: right;
+      display: flex;
+      align-items: center;
+      height: $summary-min-height - $general-margin * 2;
+    }
+
+    @media screen and (min-width: $grid-lg) {
+      padding: 0;
+      margin-top: 60px;
+      vertical-align: top;
+      width: calc(40% - 20px);
+      margin-left: 10px;
+      margin-right: 10px;
+      display: inline-block;
+      float: none;
+    }
+
+    &.no-float {
+      @media screen and (min-width: $grid-md) {
+        padding: $general-margin;
+        float: none;
+        margin: 0;
+        width: initial;
+      }
+
+      @media screen and (min-width: $grid-lg) {
+        padding: 0;
+        margin-top: 60px;
+        vertical-align: top;
+        width: calc(40% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
+        display: inline-block;
+        float: none;
+      }
+    }
+  }
+}

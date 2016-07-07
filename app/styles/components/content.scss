@@ -1,0 +1,22 @@
+.content-component {
+  .title-container {
+    .title {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .date {
+      float: right;
+      color: $text-dark-secondary;
+    }
+  }
+
+  .subtitle {
+    color: $text-dark-secondary;
+    font-size: 15px;
+  }
+
+  .main-content {
+    margin-left: $general-margin;
+  }
+}

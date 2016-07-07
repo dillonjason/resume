@@ -1,0 +1,9 @@
+.card-list-component {
+  @media screen and (min-width: $grid-sm) {
+    .card-component {
+      .card {
+        height: calc(100% - #{$general-margin * 4})
+      }
+    }
+  }
+}
