@@ -117,13 +117,38 @@ class Achievements extends React.Component {
                             <img src={BfgForm}/>
                             <img src={BfgSearch}/>
                         </ImageList>
+
+                        <Card>
+                            <div><strong>Summary</strong></div>
+                            Backend had been completed by another company.
+                            The goal of this project was to develop a modern front end single-paged application.
+                        </Card>
+
+                        <CardList>
+                            <div>Introduced to Webpack</div>
+                            <div>Introduced to React</div>
+                            <div>Introduced to Redux</div>
+                            <div>Work closely with backend team to work with API</div>
+                        </CardList>
                     </Content>
 
                     <Content
                         title="TEMPO"
                         subTitle="Role: Full Stack"
                     >
+                        <Card>
+                            <div><strong>Summary</strong></div>
+                            Develop a web application to allow police officers to have a customizable dashboard that
+                            allows them to see information that is important to them.  Also build multiple query pages
+                            to allow users to quickly research all stored data.
+                        </Card>
 
+                        <CardList>
+                            <div>Introduced to jQuery</div>
+                            <div>Introduced to Bootstrap</div>
+                            <div>First Complete application built</div>
+                            <div>Work directly with users to determine what was most beneficial to them</div>
+                        </CardList>
                     </Content>
                 </ContentList>
             </div>
