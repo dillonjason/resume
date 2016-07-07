@@ -30,7 +30,7 @@
     "webpack-validator": "^2.2.2"
   },
   "scripts": {
-    "postinstall": "webpack",
+    "postinstall": "node deploy",
     "start": "node server.js",
     "build": "webpack",
     "startdev": "webpack-dev-server --history-api-fallback",
