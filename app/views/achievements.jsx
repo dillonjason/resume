@@ -17,6 +17,12 @@ import BfgDashboard from '../images/projects/bfg-dashboard.png'
 import BfgForm from '../images/projects/bfg-form.png'
 import BfgSearch from '../images/projects/bfg-search.png'
 
+import TempoHome from '../images/projects/TempoHomePage.png'
+import TempoSNI from '../images/projects/SimpleNameInquiry.png'
+import TempoSNIResults from '../images/projects/SimpleNameInquiryResults.png'
+import TempoANI from '../images/projects/AdvancedNameInquiry.png'
+import TempoBanner from '../images/projects/BannedList.png'
+
 class Achievements extends React.Component {
     render() {
         return(
@@ -136,6 +142,14 @@ class Achievements extends React.Component {
                         title="TEMPO"
                         subTitle="Role: Full Stack"
                     >
+                        <ImageList>
+                            <img src={TempoHome}/>
+                            <img src={TempoBanner}/>
+                            <img src={TempoANI}/>
+                            <img src={TempoSNI}/>
+                            <img src={TempoSNIResults}/>
+                        </ImageList>
+
                         <Card>
                             <div><strong>Summary</strong></div>
                             Develop a web application to allow police officers to have a customizable dashboard that
