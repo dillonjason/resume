@@ -62,6 +62,7 @@ var config;
 
 switch(TARGET) {
     case 'build':
+    case 'postinstall':
     case 'stats':
         config = merge(common,
             loaders.es6Loader(PATHS.app),
