@@ -5,9 +5,7 @@
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-router": "^2.5.2",
-    "redux": "^3.5.2"
-  },
-  "devDependencies": {
+    "redux": "^3.5.2",
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.9.0",
@@ -29,8 +27,10 @@
     "webpack-merge": "^0.14.0",
     "webpack-validator": "^2.2.2"
   },
+  "devDependencies": {
+  },
   "scripts": {
-    "postinstall": "./node-modules/webpack/bin/webpack",
+    "postinstall": "webpack",
     "start": "node server.js",
     "build": "webpack",
     "startdev": "webpack-dev-server --history-api-fallback",
