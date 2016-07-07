@@ -1,6 +1,6 @@
 {
   "name": "dillon-resume",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "dependencies": {
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
@@ -30,8 +30,10 @@
     "webpack-validator": "^2.2.2"
   },
   "scripts": {
+    "postinstall": "webpack",
+    "start": "node server.js",
     "build": "webpack",
-    "start": "webpack-dev-server --history-api-fallback",
+    "startdev": "webpack-dev-server --history-api-fallback",
     "stats": "webpack --profile --json > stats.json"
   }
 }
