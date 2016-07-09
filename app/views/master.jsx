@@ -3,6 +3,10 @@ import Navbar from '../components/nav/navbar'
 import { browserHistory } from 'react-router'
 
 class Master extends React.Component {
+    componentWillUpdate() {
+        window.scrollTo(0,0);
+    }
+
     render() {
         let isHome = this.props.location.pathname === '/';
         return (

@@ -1,8 +1,12 @@
 $menu-hide: 300px;
 
+.pure-menu {
+  position: relative;
+  z-index: 3;
+}
+
 .pure-menu.mobile-menu {
   position: absolute;
-  top: $menu-height;
 
   .pure-menu-list {
     position: absolute;
@@ -110,7 +114,7 @@ $menu-hide: 300px;
 
   .pure-menu-link {
     color: $text-light;
-    padding: 1em 1em;
+    padding: 15px;
     transition: padding $general-speed ease-in-out;
 
     &:hover {
