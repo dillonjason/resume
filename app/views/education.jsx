@@ -2,7 +2,6 @@ import SummaryContainer from '../components/summary-container'
 import Quote from '../components/quote'
 import ContentList from '../components/content-list'
 import Content from '../components/content'
-import EducationImage from '../images/banners/education/education-image.jpg'
 import CardList from '../components/card-list'
 import Database from '../images/education-electives/database-flat.png'
 import AI from '../images/education-electives/graph-flat.png'
@@ -12,7 +11,7 @@ class Education extends React.Component {
     render() {
         return(
             <div>
-                <SummaryContainer graphic={EducationImage}>
+                <SummaryContainer graphicClass="education">
                     <Quote
                         quote="I am always doing that which I cannot do, in order that I may learn how to do it."
                         source="Pablo Picasso"

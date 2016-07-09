@@ -1,5 +1,4 @@
 import SummaryContainer from '../components/summary-container'
-import SkillsImage from '../images/banners/skills/skills-image.jpg'
 import Quote from '../components/quote'
 import ContentList from '../components/content-list'
 import Content from '../components/content'
@@ -34,7 +33,7 @@ class Skills extends React.Component {
     render() {
         return(
             <div>
-                <SummaryContainer graphic={SkillsImage}>
+                <SummaryContainer graphicClass="skills">
                     <Quote
                         quote="I have forgotten much that I thought I knew, and learned again much that I had forgotten."
                         source="Gandalf"

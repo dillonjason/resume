@@ -1,0 +1,101 @@
+.summary-container .graphic {
+  &.home {
+    background-image: url('./images/banners/home/home-image-sm.jpg');
+
+    @media screen and (min-width:$grid-sm) {
+      background-image: url('./images/banners/home/home-image-md.jpg');
+    }
+
+    @media screen and (min-width:$grid-md) {
+      background-image: url('./images/banners/home/home-image-lg.jpg');
+    }
+
+    @media screen and (min-width:$grid-lg) {
+      background-image: url('./images/banners/home/home-image-x1.jpg');
+    }
+
+    @media screen and (min-width:$grid-x1) {
+      background-image: url('./images/banners/home/home-image-retina.jpg');
+    }
+  }
+
+  &.education {
+    background-image: url('./images/banners/education/education-image-sm.jpg');
+
+    @media screen and (min-width:$grid-sm) {
+      background-image: url('./images/banners/education/education-image-md.jpg');
+    }
+
+    @media screen and (min-width:$grid-md) {
+      background-image: url('./images/banners/education/education-image-lg.jpg');
+    }
+
+    @media screen and (min-width:$grid-lg) {
+      background-image: url('./images/banners/education/education-image-x1.jpg');
+    }
+
+    @media screen and (min-width:$grid-x1) {
+      background-image: url('./images/banners/education/education-image-retina.jpg');
+    }
+  }
+
+  &.experience {
+    background-image: url('./images/banners/experience/experience-image-sm.jpg');
+
+    @media screen and (min-width:$grid-sm) {
+      background-image: url('./images/banners/experience/experience-image-md.jpg');
+    }
+
+    @media screen and (min-width:$grid-md) {
+      background-image: url('./images/banners/experience/experience-image-lg.jpg');
+    }
+
+    @media screen and (min-width:$grid-lg) {
+      background-image: url('./images/banners/experience/experience-image-x1.jpg');
+    }
+
+    @media screen and (min-width:$grid-x1) {
+      background-image: url('./images/banners/experience/experience-image-retina.jpg');
+    }
+  }
+
+  &.skills {
+    background-image: url('./images/banners/skills/skills-image-sm.jpg');
+
+    @media screen and (min-width:$grid-sm) {
+      background-image: url('./images/banners/skills/skills-image-md.jpg');
+    }
+
+    @media screen and (min-width:$grid-md) {
+      background-image: url('./images/banners/skills/skills-image-lg.jpg');
+    }
+
+    @media screen and (min-width:$grid-lg) {
+      background-image: url('./images/banners/skills/skills-image-x1.jpg');
+    }
+
+    @media screen and (min-width:$grid-x1) {
+      background-image: url('./images/banners/skills/skills-image-retina.jpg');
+    }
+  }
+
+  &.achievements {
+    background-image: url('./images/banners/achievements/achievements-image-sm.jpg');
+
+    @media screen and (min-width:$grid-sm) {
+      background-image: url('./images/banners/achievements/achievements-image-md.jpg');
+    }
+
+    @media screen and (min-width:$grid-md) {
+      background-image: url('./images/banners/achievements/achievements-image-lg.jpg');
+    }
+
+    @media screen and (min-width:$grid-lg) {
+      background-image: url('./images/banners/achievements/achievements-image-x1.jpg');
+    }
+
+    @media screen and (min-width:$grid-x1) {
+      background-image: url('./images/banners/achievements/achievements-image-retina.jpg');
+    }
+  }
+}

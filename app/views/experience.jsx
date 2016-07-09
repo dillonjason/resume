@@ -1,5 +1,4 @@
 import SummaryContainer from '../components/summary-container'
-import ExpImage from '../images/banners/work/work-image.jpg'
 import Quote from '../components/quote'
 import ContentList from '../components/content-list'
 import Content from '../components/content'
@@ -9,7 +8,7 @@ class Experience extends React.Component {
     render() {
         return(
             <div>
-                <SummaryContainer graphic={ExpImage}>
+                <SummaryContainer graphicClass="experience">
                     <Quote
                         quote="The best solution to a problem is usually the easiest one..."
                         source="GLaDOS"
