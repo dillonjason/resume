@@ -37,7 +37,7 @@ exports.styleExtracts = function(paths) {
                 },
                 {
                     test: /\.s(c|a)ss$/,
-                    loaders: ["style", "css?sourceMap!sass?sourceMap"],
+                    loader: ExtractTextPlugin.extract("style", "css!sass"),
                     include: paths.styles
                 },
                 {

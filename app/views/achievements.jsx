@@ -1,5 +1,4 @@
 import SummaryContainer from '../components/summary-container'
-import AchievementsImage from '../images/achievements-image.jpg'
 import Quote from '../components/quote'
 import ContentList from '../components/content-list'
 import Content from '../components/content'
@@ -27,7 +26,7 @@ class Achievements extends React.Component {
     render() {
         return(
             <div>
-                <SummaryContainer graphic={AchievementsImage}>
+                <SummaryContainer graphicClass="achievements">
                     <Quote
                         quote="Happiness lies int he joy of achievement and the thrill of creative effort"
                         source="Franklin D. Roosevelt"
