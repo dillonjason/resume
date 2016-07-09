@@ -1,5 +1,5 @@
 import SummaryContainer from '../components/summary-container'
-import AchievementsImage from '../images/achievements-image.jpg'
+import AchievementsImage from '../images/banners/achievements/achievements-image.jpg'
 import Quote from '../components/quote'
 import ContentList from '../components/content-list'
 import Content from '../components/content'

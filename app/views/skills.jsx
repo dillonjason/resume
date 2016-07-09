@@ -1,5 +1,5 @@
 import SummaryContainer from '../components/summary-container'
-import SkillsImage from '../images/skills-image.jpg'
+import SkillsImage from '../images/banners/skills/skills-image.jpg'
 import Quote from '../components/quote'
 import ContentList from '../components/content-list'
 import Content from '../components/content'

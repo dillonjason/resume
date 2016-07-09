@@ -2,11 +2,11 @@ import SummaryContainer from '../components/summary-container'
 import Quote from '../components/quote'
 import ContentList from '../components/content-list'
 import Content from '../components/content'
-import EducationImage from '../images/education-image.jpg'
+import EducationImage from '../images/banners/education/education-image.jpg'
 import CardList from '../components/card-list'
-import Database from '../images/database-flat.png'
-import AI from '../images/graph-flat.png'
-import WebProgramming from '../images/html-flat.png'
+import Database from '../images/education-electives/database-flat.png'
+import AI from '../images/education-electives/graph-flat.png'
+import WebProgramming from '../images/education-electives/html-flat.png'
 
 class Education extends React.Component {
     render() {

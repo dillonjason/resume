@@ -1,5 +1,5 @@
 import SummaryContainer from '../components/summary-container'
-import ExpImage from '../images/work-image.jpg'
+import ExpImage from '../images/banners/work/work-image.jpg'
 import Quote from '../components/quote'
 import ContentList from '../components/content-list'
 import Content from '../components/content'
