@@ -1,9 +1,10 @@
 {
   "name": "dillon-resume",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "dependencies": {
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
+    "react-ga": "^2.1.1",
     "react-router": "^2.5.2"
   },
   "devDependencies": {

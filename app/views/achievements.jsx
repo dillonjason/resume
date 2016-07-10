@@ -27,9 +27,10 @@ class Achievements extends React.Component {
     render() {
         return(
             <View>
+
                 <SummaryContainer graphicClass="achievements">
                     <Quote
-                        quote="Happiness lies int he joy of achievement and the thrill of creative effort"
+                        quote="Happiness lies in the joy of achievement and the thrill of creative effort"
                         source="Franklin D. Roosevelt"
                     />
                 </SummaryContainer>
