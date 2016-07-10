@@ -1,5 +1,5 @@
+import View from '../libs/view'
 import SummaryContainer from '../components/summary-container'
-import ExpImage from '../images/work-image.jpg'
 import Quote from '../components/quote'
 import ContentList from '../components/content-list'
 import Content from '../components/content'
@@ -8,8 +8,8 @@ import CardList from '../components/card-list'
 class Experience extends React.Component {
     render() {
         return(
-            <div>
-                <SummaryContainer graphic={ExpImage}>
+            <View>
+                <SummaryContainer graphicClass="experience">
                     <Quote
                         quote="The best solution to a problem is usually the easiest one..."
                         source="GLaDOS"
@@ -85,7 +85,7 @@ class Experience extends React.Component {
                         </CardList>
                     </Content>
                 </ContentList>
-            </div>
+            </View>
         );
     }
 }

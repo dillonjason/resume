@@ -1,8 +1,25 @@
 import View from '../libs/view'
 import Navbar from '../components/nav/navbar'
 import { browserHistory } from 'react-router'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 class Master extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            scrollDelay: null
+        };
+    }
+    componentWillUpdate() {
+        if (this.state.scrollDelay)
+            window.clearTimeout(this.state.scrollDelay);
+
+        this.state.scrollDelay = window.setTimeout(() => {
+            window.scrollTo(0,0);
+        }, 750);
+    }
+
     render() {
         let isHome = this.props.location.pathname === '/';
         return (
@@ -19,9 +36,17 @@ class Master extends React.Component {
                     }
                     showCards={isHome}
                 />
-                <View className={isHome ? "menu-not-fixed" : ""}>
-                    {this.props.children}
-                </View>
+                <ReactCSSTransitionGroup
+                    component="div"
+                    className="react-animate-main"
+                    transitionName="main-animate"
+                    transitionEnterTimeout={1500}
+                    transitionLeaveTimeout={1500}
+                >
+                    {React.cloneElement(this.props.children, {
+                        key: this.props.location.pathname
+                    })}
+                </ReactCSSTransitionGroup>
             </div>
         );
     }

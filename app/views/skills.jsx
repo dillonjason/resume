@@ -1,5 +1,5 @@
+import View from '../libs/view'
 import SummaryContainer from '../components/summary-container'
-import SkillsImage from '../images/skills-image.jpg'
 import Quote from '../components/quote'
 import ContentList from '../components/content-list'
 import Content from '../components/content'
@@ -33,8 +33,8 @@ import WebpackLogo from '../images/logos/webpack-logo.png'
 class Skills extends React.Component {
     render() {
         return(
-            <div>
-                <SummaryContainer graphic={SkillsImage}>
+            <View>
+                <SummaryContainer graphicClass="skills">
                     <Quote
                         quote="I have forgotten much that I thought I knew, and learned again much that I had forgotten."
                         source="Gandalf"
@@ -132,7 +132,7 @@ class Skills extends React.Component {
                         </CardList>
                     </Content>
                 </ContentList>
-            </div>
+            </View>
         );
     }
 }

@@ -1,0 +1,45 @@
+.main-animate-leave {
+  position: absolute;
+  width: 100%;
+  opacity: 1;
+  transition: opacity 0ms ease-in-out $general-speed;
+
+  .view-animation {
+    height: 0;
+    width: 0;
+  }
+
+  &.main-animate-leave-active {
+    opacity: 0;
+    .view-animation {
+      height: 150%;
+      width: 150%;
+      transition: height $general-speed ease-in-out, width $general-speed ease-in-out;
+    }
+  }
+}
+
+.main-animate-enter {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0ms ease-in-out #{$general-speed - 5};
+
+  .view-animation {
+    height: 150%;
+    width: 150%;
+    opacity: 0;
+  }
+
+  &.main-animate-enter-active {
+    opacity: 1;
+    .view-animation {
+      height: 0;
+      width: 0;
+      opacity: 1;
+      transition: height $general-speed ease-in-out $general-speed,
+      width $general-speed ease-in-out $general-speed,
+      opacity 0ms ease-in-out $general-speed;
+    }
+  }
+}

@@ -1,26 +1,55 @@
 import NavItem from './nav-item'
 import { Link } from 'react-router'
+import FixedOverlay from '../../components/fixed-overlay'
 
 class Navbar extends React.Component {
     constructor(props) {
         super();
 
         this.state = {
-            showCards: props.showCards
+            showCards: props.showCards,
+            transitionDelay: null,
+            showOverlay: false
         }
     }
 
     componentWillReceiveProps(nextProps) {
-        this.setState({'showCards': nextProps.showCards});
+        let oldDelay = this.state.transitionDelay;
+
+        if (oldDelay)
+            window.clearTimeout(oldDelay);
+
+        let delay = window.setTimeout(() => {
+            this.setState({'showCards': nextProps.showCards});
+        }, 750);
+
+        this.setState({'transitionDelay': delay});
     }
 
     onNavItemClick = () => {
-      this.setState({'showCards': false});
-        this.refs.menu.classList.remove('show');
+        this.setState({'showCards': false});
+
+        if (this.refs.menu) {
+            this.refs.menu.classList.remove('show');
+            window.setTimeout(() => {
+                this.setState({'showOverlay': false});
+            }, 750);
+        }
     };
 
     onMobileToggleClick = () => {
-        this.refs.menu.classList.toggle('show');
+        if (this.state.showOverlay) {
+            this.refs.menu.classList.remove('show');
+            window.setTimeout(() => {
+                this.setState({'showOverlay': false});
+            }, 750);
+        }
+        else {
+            this.setState({'showOverlay': true});
+            window.setTimeout(() => {
+                this.refs.menu.classList.add('show');
+            }, 250);
+        }
     };
 
     generateMenuList = (ref) => {
@@ -36,6 +65,14 @@ class Navbar extends React.Component {
     render() {
         return(
             <div className="resume-nav">
+                {this.state.showOverlay &&
+                    <FixedOverlay onClick={this.onMobileToggleClick} belowMenu={true}>
+                        <div className="pure-menu mobile-menu">
+                            {this.generateMenuList("menu")}
+                        </div>
+                    </FixedOverlay>
+                }
+
                 <div className={"pure-menu pure-menu-horizontal " + (this.state.showCards ? "menu-cards" : "pure-menu-fixed") }>
                     <div className="mobile-toggle" onClick={this.onMobileToggleClick}>
                         <s className="bar"></s>
@@ -46,10 +83,6 @@ class Navbar extends React.Component {
                         <Link to="/" className="pure-menu-heading pure-menu-link" onClick={this.onNavItemClick}>{this.props.header}</Link>
                     }
                     {this.generateMenuList()}
-                </div>
-
-                <div className="pure-menu mobile-menu">
-                    {this.generateMenuList("menu")}
                 </div>
             </div>
         );

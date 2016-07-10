@@ -13,6 +13,10 @@ app.use(compression());
 // We point to our static assets
 app.use(express.static(publicPath));
 
+// send all requests to index.html so browserHistory in React Router works
+app.get('*', function (req, res) {
+    res.sendFile(path.join(publicPath, 'index.html'))
+})
 
 // And run the server
 app.listen(port, function () {
