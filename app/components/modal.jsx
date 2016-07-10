@@ -1,5 +1,6 @@
 import Card from '../components/card'
 import FixedOverlay from '../components/fixed-overlay'
+import ReactGA from 'react-ga'
 
 class Modal extends React.Component {
     constructor(props) {
@@ -24,6 +25,7 @@ class Modal extends React.Component {
         }
 
         if (props.show) {
+            ReactGA.modalview(props.title.replace(/\s/g, '') || 'UnknownModalViewed');
             let delay = window.setTimeout(() => {
                 this.refs.modal.classList.add('show');
             }, 250);

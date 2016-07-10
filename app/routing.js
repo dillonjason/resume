@@ -1,5 +1,6 @@
 import { render } from 'react-dom'
 import { Router, Route, browserHistory, IndexRoute } from 'react-router'
+import ReactGA from 'react-ga'
 
 import Master from './views/master'
 import Home from './views/home'
@@ -8,9 +9,16 @@ import Experience from './views/experience'
 import Skills from './views/skills'
 import Achievements from './views/achievements'
 
+ReactGA.initialize('UA-80542165-1');
+
+function logPageView() {
+    ReactGA.set({ page: window.location.pathname });
+    ReactGA.pageview(window.location.pathname);
+}
+
 export default render(
     (
-        <Router history={browserHistory}>
+        <Router history={browserHistory} onUpdate={logPageView}>
             <Route path="/" component={Master}>
                 <IndexRoute component={Home} />
                 <Route path="/Education" component={Education} />
