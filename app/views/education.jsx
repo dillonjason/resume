@@ -1,3 +1,4 @@
+import View from '../libs/view'
 import SummaryContainer from '../components/summary-container'
 import Quote from '../components/quote'
 import ContentList from '../components/content-list'
@@ -10,7 +11,7 @@ import WebProgramming from '../images/education-electives/html-flat.png'
 class Education extends React.Component {
     render() {
         return(
-            <div>
+            <View>
                 <SummaryContainer graphicClass="education">
                     <Quote
                         quote="I am always doing that which I cannot do, in order that I may learn how to do it."
@@ -41,7 +42,7 @@ class Education extends React.Component {
                     </Content>
                 </ContentList>
 
-            </div>
+            </View>
         );
     }
 }
