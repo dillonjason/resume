@@ -45,7 +45,7 @@ const common = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'index',
+            title: 'Dillon Jason',
             template: 'app/index-template.ejs'
         })
     ],

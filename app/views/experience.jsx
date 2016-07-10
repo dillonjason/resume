@@ -1,3 +1,4 @@
+import View from '../libs/view'
 import SummaryContainer from '../components/summary-container'
 import Quote from '../components/quote'
 import ContentList from '../components/content-list'
@@ -7,7 +8,7 @@ import CardList from '../components/card-list'
 class Experience extends React.Component {
     render() {
         return(
-            <div>
+            <View>
                 <SummaryContainer graphicClass="experience">
                     <Quote
                         quote="The best solution to a problem is usually the easiest one..."
@@ -84,7 +85,7 @@ class Experience extends React.Component {
                         </CardList>
                     </Content>
                 </ContentList>
-            </div>
+            </View>
         );
     }
 }

@@ -1,3 +1,4 @@
+import View from '../libs/view'
 import SummaryContainer from '../components/summary-container'
 import Quote from '../components/quote'
 import ContentList from '../components/content-list'
@@ -32,7 +33,7 @@ import WebpackLogo from '../images/logos/webpack-logo.png'
 class Skills extends React.Component {
     render() {
         return(
-            <div>
+            <View>
                 <SummaryContainer graphicClass="skills">
                     <Quote
                         quote="I have forgotten much that I thought I knew, and learned again much that I had forgotten."
@@ -131,7 +132,7 @@ class Skills extends React.Component {
                         </CardList>
                     </Content>
                 </ContentList>
-            </div>
+            </View>
         );
     }
 }

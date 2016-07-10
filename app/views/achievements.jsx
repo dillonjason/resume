@@ -1,3 +1,4 @@
+import View from '../libs/view'
 import SummaryContainer from '../components/summary-container'
 import Quote from '../components/quote'
 import ContentList from '../components/content-list'
@@ -25,7 +26,7 @@ import TempoBanner from '../images/projects/BannedList.png'
 class Achievements extends React.Component {
     render() {
         return(
-            <div>
+            <View>
                 <SummaryContainer graphicClass="achievements">
                     <Quote
                         quote="Happiness lies int he joy of achievement and the thrill of creative effort"
@@ -164,7 +165,7 @@ class Achievements extends React.Component {
                         </CardList>
                     </Content>
                 </ContentList>
-            </div>
+            </View>
         );
     }
 }

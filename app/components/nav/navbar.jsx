@@ -8,12 +8,22 @@ class Navbar extends React.Component {
 
         this.state = {
             showCards: props.showCards,
+            transitionDelay: null,
             showOverlay: false
         }
     }
 
     componentWillReceiveProps(nextProps) {
-        this.setState({'showCards': nextProps.showCards});
+        let oldDelay = this.state.transitionDelay;
+
+        if (oldDelay)
+            window.clearTimeout(oldDelay);
+
+        let delay = window.setTimeout(() => {
+            this.setState({'showCards': nextProps.showCards});
+        }, 750);
+
+        this.setState({'transitionDelay': delay});
     }
 
     onNavItemClick = () => {
