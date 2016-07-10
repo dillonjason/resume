@@ -21,7 +21,7 @@ body {
     width: 0;
     top: -15px;
     left: -15px;
-    border-radius: 0 45% 45% 35%;
+    border-radius: 0 25% 25% 25%;
     background-color: $primary-dark;
   }
 
@@ -32,6 +32,53 @@ body {
 
 .clear-fix {
   clear: both;
+}
+
+.after-clear-fix:after {
+  display: block;
+  content: ' ';
+  clear: both;
+}
+
+.pure-button.fab {
+  border-radius: 50%;
+  box-shadow: $shadow-level-2;
+}
+
+.fixed-bottom-right {
+  position: fixed;
+  bottom: $general-margin;
+  right: $general-margin;
+  z-index: 50;
+}
+
+.pure-button.accent-button {
+  background-color: transparent;
+  color: $accent;
+
+  &:hover, &:active, &:focus {
+    background-color: transparent;
+    color: $accent;
+    background-image: none;
+    box-shadow: none;
+  }
+
+  &.fab {
+    background-color: $accent;
+    color: $white;
+
+    img {
+      max-width: 25px;
+      margin-top: 8px;
+    }
+
+    &:hover, &:active, &:focus {
+      background-color: $accent;
+      color: $white;
+      background-image: none;
+      box-shadow: $shadow-level-2;
+    }
+  }
 }
 
 .pull-right {

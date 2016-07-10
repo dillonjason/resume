@@ -11,7 +11,9 @@ class FixedOverlay extends React.Component {
         return(
             <div className={"fixed-overlay-component " + (this.props.belowMenu ? "below-menu" : "")}
                     onClick={this.props.onClick}>
-                {this.props.children}
+                <div onClick={(e) => {if (this.props.stopPropagation) {e.stopPropagation()}}}>
+                    {this.props.children}
+                </div>
             </div>
         );
     }
@@ -19,12 +21,14 @@ class FixedOverlay extends React.Component {
 
 FixedOverlay.propTypes = {
     onClick: React.PropTypes.func,
-    belowMenu: React.PropTypes.bool
+    belowMenu: React.PropTypes.bool,
+    stopPropagation: React.PropTypes.bool
 };
 
 FixedOverlay.defaultProps = {
     onClick: f => f,
-    belowMenu: false
+    belowMenu: false,
+    stopPropagation: false
 };
 
 export default FixedOverlay;

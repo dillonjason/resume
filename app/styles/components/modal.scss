@@ -1,0 +1,40 @@
+.modal-component {
+  .card-component {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    transition: top $general-speed ease-in-out;
+    transform: translateZ(0);
+
+    @media screen and (min-width: $grid-md) {
+      width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+    }
+
+    @media screen and (min-width: $grid-lg) {
+      width: 50%;
+      max-width: 720px;
+    }
+
+    .card {
+      box-shadow: $shadow-level-2;
+    }
+  }
+
+  &.show {
+    .card-component {
+      top:0;
+    }
+  }
+
+  .button {
+    &:after {
+      display: block;
+      content: " ";
+      clear: both;
+    }
+  }
+}
