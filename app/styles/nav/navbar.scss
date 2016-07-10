@@ -13,6 +13,10 @@ $menu-hide: 300px;
     left: -1 * $menu-hide;
     right: initial;
 
+    &:last-child {
+      margin-bottom: 70px;
+    }
+
     .pure-menu-item {
       position: relative;
       background-color: $accent;

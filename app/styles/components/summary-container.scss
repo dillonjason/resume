@@ -46,6 +46,7 @@ $summary-min-height: 250px;
       margin-right: 65px;
       float: right;
       display: flex;
+      flex-direction: column;
       align-items: center;
       height: $summary-min-height - $general-margin * 2;
     }
