@@ -32,12 +32,12 @@ exports.styleExtracts = function(paths) {
             loaders: [
                 {
                     test: /\.css$/,
-                    loader: ExtractTextPlugin.extract('style', 'css'),
+                    loader: ExtractTextPlugin.extract('style', 'css!postcss'),
                     include: paths.styles
                 },
                 {
                     test: /\.s(c|a)ss$/,
-                    loader: ExtractTextPlugin.extract("style", "css!sass"),
+                    loader: ExtractTextPlugin.extract("style", "css!postcss!sass"),
                     include: paths.styles
                 },
                 {

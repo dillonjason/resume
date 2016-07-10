@@ -3,6 +3,7 @@
   width: 100%;
   opacity: 1;
   transition: opacity 0ms ease-in-out $general-speed;
+  transform: translateZ(0);
 
   .view-animation {
     height: 0;
@@ -15,6 +16,7 @@
       height: 150%;
       width: 150%;
       transition: height $general-speed ease-in-out, width $general-speed ease-in-out;
+      transform: translateZ(0);
     }
   }
 }
@@ -24,6 +26,7 @@
   width: 100%;
   opacity: 0;
   transition: opacity 0ms ease-in-out #{$general-speed - 5};
+  transform: translateZ(0);
 
   .view-animation {
     height: 150%;
@@ -40,6 +43,7 @@
       transition: height $general-speed ease-in-out $general-speed,
       width $general-speed ease-in-out $general-speed,
       opacity 0ms ease-in-out $general-speed;
+      transform: translateZ(0);
     }
   }
 }

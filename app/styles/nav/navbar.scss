@@ -23,6 +23,7 @@ $menu-hide: 300px;
       left: 0;
       text-align: center;
       transition: left $general-speed ease-in-out;
+      transform: translateZ(0);
 
       &:nth-child(2) {
         transition-delay: 75ms;
@@ -105,6 +106,7 @@ $menu-hide: 300px;
     position: absolute;
     right: calc(100% - 696px);
     transition: right $general-speed ease-in-out;
+    transform: translateZ(0);
 
     .pure-menu-link {
       width: 105px;
@@ -116,6 +118,7 @@ $menu-hide: 300px;
     color: $text-light;
     padding: 15px;
     transition: padding $general-speed ease-in-out;
+    transform: translateZ(0);
 
     &:hover {
       background-color: $primary;
@@ -141,6 +144,7 @@ $menu-hide: 300px;
     transition: top $general-speed ease-in-out,
                 margin-right $general-speed ease-in-out,
                 background-color $general-speed ease-in-out;
+    transform: translateZ(0);
 
     position: relative;
     top: 0;
